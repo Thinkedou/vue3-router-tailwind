@@ -8,7 +8,7 @@ import TheNav from './components/TheNav.vue';
     <main>
       <router-view></router-view>
     </main>
-</div>
+  </div>
 </template>
 
 <style scoped>
