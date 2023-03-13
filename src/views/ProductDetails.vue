@@ -7,7 +7,8 @@ const route = useRoute()
 const productId = ref(0)
 
 const catchProductId = ()=>{
-  productId.value = route.params.id
+  console.log(route)
+  productId.value = route.params.productId
 }
 
 catchProductId()
@@ -16,7 +17,7 @@ catchProductId()
 
 <template>
   <div class="mx-auto max-w-2xl py-24 flex">
-    <h2 class="text-3xl font-bold mx-12"> Product ID: {{ productId }} </h2>
+    <h2 class="text-3xl font-bold mx-12"> Product ID: {{ route.params.productId }} </h2>
     <ProductCard />
 
   </div>
