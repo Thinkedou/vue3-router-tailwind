@@ -16,10 +16,8 @@ onBeforeMount(()=>{
 <template>
   <nav id="header" class="w-full z-30 top-0 bg-gradient-to-r from-emerald-400 to-cyan-400">
         <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
-          <div class="pl-4 flex items-center">
-            <a class="no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
-              VUE ROUTER
-            </a>
+          <div class="pl-4 flex items-center">         
+            <router-link :to="{name:'home'}" class="no-underline hover:no-underline font-bold text-2xl lg:text-4xl">VUE ROUTER</router-link>
           </div>
           <div class="block lg:hidden pr-4">
             <button id="nav-toggle" class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">

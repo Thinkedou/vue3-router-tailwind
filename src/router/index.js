@@ -5,6 +5,7 @@ import ProductDetails from '../views/ProductDetails.vue'
 
 
 
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -15,11 +16,11 @@ const router = createRouter({
     },
     {
       path: '/products',
-      name: 'product',
+      name: 'products',
       component: ProductList
     },
     {
-      path: '/products/:id',
+      path: '/products/:productId',
       name: 'productDetails',
       component: ProductDetails
     }
