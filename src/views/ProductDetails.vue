@@ -1,5 +1,5 @@
 <script  setup>
-import {ref} from "vue"
+import {ref, onBeforeMount} from "vue"
 import { useRoute } from 'vue-router'
 import ProductCard from '../components/ProductCard.vue';
 
@@ -11,6 +11,15 @@ const catchProductId = ()=>{
 }
 
 catchProductId()
+
+
+onBeforeMount(()=>{
+  console.log('%c ProductDetails:: onBeforeMount()', 'background-color:blue;color:white;');
+})
+
+
+
+
 
 </script>
 

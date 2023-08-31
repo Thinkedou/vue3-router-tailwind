@@ -1,10 +1,15 @@
 <script setup>
+import { onBeforeMount } from 'vue';
 
+
+onBeforeMount(()=>{
+  console.log('%c ProductCard:: onBeforeMount()', 'background-color:lime;color:grey;');
+})
 </script>
 
 
 <template>
-  <div class="max-w-sm rounded overflow-hidden shadow border-solid border-2 border-emerald-200 border-slate-300">
+  <div class="max-w-sm rounded overflow-hidden shadow border-solid border-2 border-emerald-200">
       <img class="w-full" src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-02.jpg" alt="Sunset in the mountains">
       <div class="px-6 py-4">
         <div class="font-bold text-xl mb-2">The walnut wood</div>

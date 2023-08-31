@@ -1,4 +1,14 @@
 <script setup>
+import { onBeforeMount } from 'vue';
+import { RouterLink } from 'vue-router';
+
+
+// rappel: onBeforeMount est appelé automatiquement quand le composant est "mount", chargé
+// comme la navigation n'est plus gêrée par le navigateur mais intercepté par vue, on remarque que ce composant de Nav
+// n'est chargé qu'une seule fois: à l'initialisation
+onBeforeMount(()=>{
+  console.log('%c TheNav:: onBeforeMount()', 'background-color:white;color:blue;');
+})
 
 </script>
 
@@ -22,18 +32,13 @@
           <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 text-black p-4 lg:p-0 z-20" id="nav-content">
             <ul class="list-reset lg:flex justify-end flex-1 items-center">
               <li class="mr-3">
-                <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Home</a>
+                <RouterLink to="/" class="inline-block py-2 px-4 text-black font-bold no-underline">Home</RouterLink>
               </li>
               <li class="mr-3">
-                <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">Products</a>
+                <RouterLink to="/products" class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4">Products</RouterLink>
+                <!-- <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">Products</a> -->
               </li>
             </ul>
-            <button
-              id="navAction"
-              class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-            >
-              Action
-            </button>
           </div>
         </div>
         <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
@@ -42,5 +47,14 @@
 
 
 
-<style lang="scss" scoped>
+<style scoped>
+
+
+
+.router-link-exact-active{
+  border-bottom: 2px dotted rgb(223, 224, 223);
+}
+
+
+
 </style>
