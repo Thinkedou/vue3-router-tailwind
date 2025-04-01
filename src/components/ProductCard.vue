@@ -10,7 +10,7 @@ onBeforeMount(()=>{
 
 <template>
   <div class="max-w-sm rounded overflow-hidden shadow border-solid border-2 border-emerald-200">
-      <img class="w-full" src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-02.jpg" alt="Sunset in the mountains">
+      <img class="w-full" src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-feature-03-detail-02.jpg" alt="Sunset in the mountains">
       <div class="px-6 py-4">
         <div class="font-bold text-xl mb-2">The walnut wood</div>
         <p class="text-gray-700 text-base">
